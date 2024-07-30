@@ -1,0 +1,46 @@
+
+header{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: tomato;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.aviso{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emoji{
+    width: 20px;
+    height: 20px;
+}
+div.hide{
+    display: none;
+}
+
+button{
+    background-image: linear-gradient(to right, #ccc, rgb(78, 75, 75));
+}
+
+button:hover{
+    background-image: linear-gradient(to right,rgb(78, 75, 75), #262525);
+}
+
+
+footer{
+    margin-top: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .7rem;
+    text-align: center;
+    padding: 0 2%;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Lâmpada</header>
+    <main>
+        <img id="imagem" src="img/desligada-semfundo.png">
+        <div class="manual">
+            <button id="ligar">Ligar</button>
+            <button id="desligar">Deligar</button>
+            <button id="quebrar">Quebrar</button>
+            <audio>
+                <source src="sound/som-lampada.mp3" type="audio/mpeg" >
+            </audio>
+        </div>
+        <div class="aviso hide">
+            <p>
+                <b>Aviso:</b> Você quebrou a lâmpada.<br>Atualize a página!
+            </p>
+            <img class="emoji" src="img/triste.png">
+        </div>
+        <footer> By: Fabrício M. Rebeschini</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
