@@ -5,12 +5,25 @@ const quebrar = document.querySelector('#quebrar');
 const aviso = document.querySelector('.aviso')
 let isBroke = false;
 
-
+function resetAndPlayAudio(audio){
+    //se nao estiver pausado
+    if(!audio.paused){
+        //pause
+        audio.pause()
+        //e reinicie o audio
+        audio.currentTime = 0
+    }
+    //se não só executar o audio
+    audio.play()
+}
 
 function turnOn(){
     if(isBroke !== true){
         imagem.src ='img/ligada-semfundo.png'
         document.body.style.backgroundColor = 'white'
+        const ligar = document.querySelector('#interruptor')
+        resetAndPlayAudio(ligar)
+
     }
 
 }
@@ -18,6 +31,8 @@ function turnOn(){
 function turnOff(){
     if(isBroke !== true){
         imagem.src = 'img/desligada-semfundo.png'
+        const desligar = document.querySelector('#interruptor')
+        resetAndPlayAudio(desligar)
         ligar.style.backgroundColor = '#ccc'
         document.body.style.backgroundColor = '#ccc'
     }
@@ -27,7 +42,7 @@ function turnOff(){
 function broken(){
     imagem.src = 'img/quebrada-semfundo.png'
     document.body.style.backgroundColor = '#ccc'
-    const audio = document.querySelector('audio')
+    const audio = document.querySelector('#audioLampada')
     audio.play()
     isBroke = true;
     if(isBroke){
